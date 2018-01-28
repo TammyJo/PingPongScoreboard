@@ -21,63 +21,72 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingLeft="24dp"
-            android:paddingTop="24dp">
+            android:padding="16dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="24dp">
+                android:paddingTop="8dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:fontFamily="sans-serif-light"
                     android:text="Score:"
                     android:textColor="#fffef2"
-                    android:textSize="24sp" />
+                    android:textSize="32sp" />
 
                 <TextView
+                    android:id="@+id/team_a_overall_score"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
                     android:text="0"
                     android:textColor="#fffef2"
-                    android:textSize="24sp" />
+                    android:textSize="32sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
                     android:text="/"
                     android:textColor="#fffef2"
-                    android:textSize="24sp" />
+                    android:textSize="32sp" />
 
                 <TextView
+                    android:id="@+id/team_b_overall_score"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
                     android:text="0"
                     android:textColor="#fffef2"
-                    android:textSize="24sp" />
-
+                    android:textSize="32sp" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="24dp">
+                android:paddingTop="8dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:fontFamily="sans-serif-medium"
                     android:text="Game number:"
                     android:textColor="#fffef2"
-                    android:textSize="24sp" />
+                    android:textSize="18sp" />
 
                 <TextView
+                    android:id="@+id/game_number"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
                     android:text="1"
                     android:textColor="#fffef2"
-                    android:textSize="24sp" />
+                    android:textSize="18sp" />
             </LinearLayout>
 
 
@@ -94,7 +103,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="24dp">
+            android:layout_marginTop="8dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -107,39 +116,54 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="sans-serif-light"
                     android:gravity="center_horizontal"
                     android:text="Player A"
                     android:textColor="#fffef2"
-                    android:textSize="24sp" />
-
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="+ 1"></Button>
+                    android:textSize="32sp" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:text="Game points"
-                    android:textColor="#fffef2" />
+                    android:textColor="#fffef2"
+                    android:textSize="18sp" />
 
                 <TextView
+                    android:id="@+id/game_points_player_a"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
                     android:gravity="center_horizontal"
                     android:text="0"
                     android:textColor="#fffef2"
                     android:textSize="36sp" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:padding="16dp"
+                    android:text="+ 1"
+                    android:textSize="24sp"></Button>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:text="Server"
-                    android:textColor="@color/colorAccent" />
+                    android:textColor="#fffef2"
+                    android:textSize="18sp" />
 
             </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorPrimary"></View>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -152,38 +176,47 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="sans-serif-light"
                     android:gravity="center_horizontal"
                     android:text="Player B"
                     android:textColor="#fffef2"
-                    android:textSize="24sp" />
-
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="+ 1"></Button>
+                    android:textSize="32sp" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:text="Game points"
-                    android:textColor="#fffef2" />
+                    android:textColor="#fffef2"
+                    android:textSize="18sp" />
 
                 <TextView
+                    android:id="@+id/game_points_player_b"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
                     android:gravity="center_horizontal"
                     android:text="0"
                     android:textColor="#fffef2"
                     android:textSize="36sp" />
-                `
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:padding="16dp"
+                    android:text="+ 1"
+                    android:textSize="24sp"></Button>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:text=""
-                    android:textColor="@color/colorAccent" />
+                    android:textColor="#fffef2"
+                    android:textSize="18sp" />
+
             </LinearLayout>
 
         </LinearLayout>
@@ -194,8 +227,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="36dp"
-        android:text="Reset"></Button>
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorPrimary"
+        android:fontFamily="sans-serif-medium"
+        android:padding="16dp"
+        android:text="Reset"
+        android:textColor="#fffef2"
+        android:textSize="20sp"></Button>
 
 
 </RelativeLayout>
