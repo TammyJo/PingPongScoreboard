@@ -32,19 +32,19 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="4dp"
-                    android:fontFamily="sans-serif-light"
+                    android:fontFamily="sans-serif-medium"
                     android:text="Score:"
                     android:textColor="#fffef2"
-                    android:textSize="32sp" />
+                    android:textSize="28sp" />
 
                 <TextView
                     android:id="@+id/team_a_overall_score"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
+                    android:fontFamily="sans-serif-medium"
                     android:text="0"
                     android:textColor="#fffef2"
-                    android:textSize="32sp" />
+                    android:textSize="28sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -52,16 +52,16 @@
                     android:fontFamily="sans-serif-light"
                     android:text="/"
                     android:textColor="#fffef2"
-                    android:textSize="32sp" />
+                    android:textSize="28sp" />
 
                 <TextView
                     android:id="@+id/team_b_overall_score"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
+                    android:fontFamily="sans-serif-medium"
                     android:text="0"
                     android:textColor="#fffef2"
-                    android:textSize="32sp" />
+                    android:textSize="28sp" />
 
             </LinearLayout>
 
@@ -76,7 +76,7 @@
                     android:layout_marginRight="4dp"
                     android:fontFamily="sans-serif-medium"
                     android:text="Game number:"
-                    android:textColor="#fffef2"
+                    android:textColor="@color/colorPrimaryDark"
                     android:textSize="18sp" />
 
                 <TextView
@@ -85,10 +85,9 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-medium"
                     android:text="1"
-                    android:textColor="#fffef2"
+                    android:textColor="@color/colorPrimaryDark"
                     android:textSize="18sp" />
             </LinearLayout>
-
 
         </LinearLayout>
 
@@ -98,7 +97,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="16dp"
-            android:background="@color/colorPrimaryDark" />
+            android:background="@color/colorPrimary" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -117,18 +116,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
-                    android:fontFamily="sans-serif-light"
+                    android:fontFamily="sans-serif-medium"
                     android:gravity="center_horizontal"
                     android:text="Player A"
                     android:textColor="#fffef2"
-                    android:textSize="32sp" />
+                    android:textSize="28sp" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:text="Game points"
-                    android:textColor="#fffef2"
+                    android:textColor="@color/colorPrimary"
                     android:textSize="18sp" />
 
                 <TextView
@@ -146,16 +145,19 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
                     android:padding="16dp"
-                    android:text="+ 1"
-                    android:textSize="24sp"></Button>
+                    android:textColor="#fffef2"
+                    android:text="+ point"
+                    android:textSize="24sp"
+                    android:onClick="addPointForPlayerA" />
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:id="@+id/server_player_a"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
+                    android:layout_gravity="center"
                     android:text="Server"
                     android:textColor="#fffef2"
-                    android:textSize="18sp" />
+                    android:textSize="22sp" />
 
             </LinearLayout>
 
@@ -177,18 +179,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
-                    android:fontFamily="sans-serif-light"
+                    android:fontFamily="sans-serif-medium"
                     android:gravity="center_horizontal"
                     android:text="Player B"
                     android:textColor="#fffef2"
-                    android:textSize="32sp" />
+                    android:textSize="28sp" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:text="Game points"
-                    android:textColor="#fffef2"
+                    android:textColor="@color/colorPrimary"
                     android:textSize="18sp" />
 
                 <TextView
@@ -206,10 +208,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
                     android:padding="16dp"
-                    android:text="+ 1"
-                    android:textSize="24sp"></Button>
+                    android:textColor="#fffef2"
+                    android:text="+ point"
+                    android:textSize="24sp"
+                    android:onClick="addPointForPlayerB" />
 
                 <TextView
+                    android:id="@+id/server_player_b"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
@@ -233,7 +238,8 @@
         android:padding="16dp"
         android:text="Reset"
         android:textColor="#fffef2"
-        android:textSize="20sp"></Button>
+        android:textSize="20sp"
+        android:onClick="reset" />
 
 
 </RelativeLayout>
